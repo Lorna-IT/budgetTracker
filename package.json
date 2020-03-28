@@ -1,0 +1,26 @@
+{
+  "name": "budgettracker",
+  "version": "1.0.0",
+  "description": "budget online and offline",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lorna-IT/budgetTracker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lorna-IT/budgetTracker/issues"
+  },
+  "homepage": "https://github.com/Lorna-IT/budgetTracker#readme",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
+    "lite-server": "^2.5.4",
+    "mongoose": "^5.9.6",
+    "morgan": "^1.10.0"
+  }
+}
