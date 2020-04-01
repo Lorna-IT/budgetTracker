@@ -4,7 +4,8 @@
   "description": "budget online and offline",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start": "server.js"
   },
   "repository": {
     "type": "git",
