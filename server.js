@@ -3,9 +3,11 @@ const logger = require("morgan");
 const mongoose = require("mongoose");
 const compression = require("compression");
 
+
 const PORT = 3000;
 
 const app = express();
+
 
 app.use(logger("dev"));
 
@@ -15,8 +17,8 @@ app.use(express.json());
 
 app.use(express.static("public"));
 let connectionURI;
-if (proccess.env.MONGODB_URI) {
-  connectionURI=proccess.env.MONGODB_URI;
+if (process.env.MONGODB_URI) {
+  connectionURI=process.env.MONGODB_URI;
 }
   else {
     connectionURI="mongodb://localhost/budget";
