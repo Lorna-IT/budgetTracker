@@ -14,8 +14,15 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use(express.static("public"));
+let connectionURI;
+if (proccess.env.MONGODB_URI) {
+  connectionURI=proccess.env.MONGODB_URI;
+}
+  else {
+    connectionURI="mongodb://localhost/budget";
+  }
 
-mongoose.connect("mongodb://localhost/budget", {
+mongoose.connect(connectionURI, {
   useNewUrlParser: true,
   useFindAndModify: false
 });
