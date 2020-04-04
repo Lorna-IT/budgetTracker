@@ -18,12 +18,14 @@ app.use(express.json());
 app.use(express.static("public"));
 let connectionURI;
 if (process.env.MONGODB_URI) {
+  console.log(process.env);
+  console.log(process.env.MONGODB_URI);
   connectionURI=process.env.MONGODB_URI;
 }
   else {
     connectionURI="mongodb://localhost/budget";
   }
-
+console.log(connectionURI)
 mongoose.connect(connectionURI, {
   useNewUrlParser: true,
   useFindAndModify: false
